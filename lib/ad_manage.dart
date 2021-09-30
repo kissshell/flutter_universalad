@@ -6,6 +6,7 @@ import 'package:flutter_unionad/flutter_unionad.dart';
 import 'package:flutter_universalad/ad_code.dart';
 import 'package:flutter_universalad/entity/native_load_bean.dart';
 import 'package:flutter_universalad/entity/splash_load_bean.dart';
+import 'package:flutter_universalad/utils.dart';
 
 import 'entity/banner_load_bean.dart';
 import 'entity/interstitial_load_bean.dart';
@@ -153,7 +154,7 @@ class AdManage {
   /// [type] 广告SDK
   ///
   void loadInteractionAd(int type) {
-    print("插屏=====》 $type");
+    dPrint("插屏=====》 $type");
     interstitialLoadBean.lastSdk = type;
     if (type == UniversalSdkKType.TENCENT) {
       //优量汇

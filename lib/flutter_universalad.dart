@@ -6,6 +6,7 @@ import 'package:flutter_unionad/flutter_unionad.dart';
 import 'package:flutter_tencentad/flutter_tencentad.dart';
 import 'package:flutter_universalad/ad_code.dart';
 import 'package:flutter_universalad/entity/version_entity.dart';
+import 'package:flutter_universalad/utils.dart';
 import 'package:flutter_universalad/widget/banner_ad_view.dart';
 import 'package:flutter_universalad/widget/native_ad_view.dart';
 import 'package:flutter_universalad/widget/splash_ad_view.dart';
@@ -192,10 +193,10 @@ class FlutterUniversalad {
   static Future<void> showInterstitialAd() async {
     if (AdManage.instance.interstitialLoadBean.lastSdk ==
         UniversalSdkKType.TENCENT) {
-      print("222广告sdk类型 ${AdManage.instance.interstitialLoadBean.lastSdk}");
+      dPrint("222广告sdk类型 ${AdManage.instance.interstitialLoadBean.lastSdk}");
       await FlutterTencentad.showUnifiedInterstitialAD();
     } else {
-      print("111广告sdk类型 ${AdManage.instance.interstitialLoadBean.lastSdk}");
+      dPrint("111广告sdk类型 ${AdManage.instance.interstitialLoadBean.lastSdk}");
       await FlutterUnionad.showFullScreenVideoAdInteraction();
     }
   }

@@ -5,6 +5,7 @@ import 'package:flutter_tencentad/flutter_tencentad.dart';
 import 'package:flutter_universalad/ad_manage.dart';
 import 'package:flutter_universalad/flutter_universalad.dart';
 import 'package:flutter_unionad/flutter_unionad.dart';
+import 'package:flutter_universalad/utils.dart';
 
 import 'ad_code.dart';
 import 'method_callback.dart';
@@ -97,7 +98,7 @@ class FlutterUniversalAdStream {
           uInteractionCallBack?.onReady!(UniversalSdkKType.TENCENT);
         },
         onUnReady: () {
-          print("2插屏广告预加载未准备就绪");
+          dPrint("2插屏广告预加载未准备就绪");
           uInteractionCallBack?.onUnReady!(UniversalSdkKType.TENCENT);
         },
         onExpose: (){
@@ -185,7 +186,7 @@ class FlutterUniversalAdStream {
           uInteractionCallBack?.onReady!(UniversalSdkKType.PANGOLIN);
         },
         onUnReady: () {
-          print("1新模板渲染插屏广告预加载未准备就绪");
+          dPrint("1新模板渲染插屏广告预加载未准备就绪");
           uInteractionCallBack?.onUnReady!(UniversalSdkKType.PANGOLIN);
         },
       ),
